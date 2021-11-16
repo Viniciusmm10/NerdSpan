@@ -92,6 +92,11 @@ body {
   padding: 5rem 0;
 }
 
+.section .title {
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+}
+
 #header {
   border-bottom: 1px solid #e4e4e4;
   margin-bottom: 2rem;
@@ -211,6 +216,8 @@ nav .icon-close {
 
   position: absolute;
   right: 1.5rem;
+
+  z-index: 9999;
   /* TRANSITION A FAZER */
 }
 
@@ -262,4 +269,78 @@ nav .icon-close {
 #home .text p {
   margin-bottom: 2rem;
   max-width: 100%;
+}
+
+/******* ABOUT *******************/
+
+#about {
+  background: white;
+}
+
+#about .container {
+  margin: 0;
+}
+
+#about .image {
+  position: relative;
+}
+
+#about .image::before {
+  content: '';
+  height: 100%;
+  width: 100%;
+  background: #0be068;
+  position: absolute;
+  top: -16.8%;
+  left: 16.8%;
+  z-index: 0;
+}
+
+#about .image img {
+  position: relative;
+  right: 2.93rem;
+}
+
+#about .image img,
+#about .image::before {
+  border-radius: 0.25rem;
+}
+
+#about .text {
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+}
+
+/******************* PAGE DE PRODUTOS ******************/
+
+.products {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.product {
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+  cursor: pointer;
+}
+
+.image-product {
+  width: 13rem;
+  height: 13rem;
+}
+
+.description {
+  background-color: #0be068;
+  color: var(--text-color-light);
+  height: 3.5rem;
+  display: flex;
+  align-items: center;
+  padding: 0.2rem;
+  border-radius: 0.25rem;
+  font: 500 1rem 'DM sans', sans-serif;
+}
+
+.product .description:hover {
+  transform: rotate(-5deg);
 }
